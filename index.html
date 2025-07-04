@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批量内容阅读器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>批量内容阅读器 (Jina Reader)</h1>
+            <p>将多个文章链接粘贴到下方，点击转换，即可获得净化后的Markdown内容。</p>
+        </header>
+        <main>
+            <textarea id="urlInput" placeholder="每行粘贴一个文章链接..."></textarea>
+            <button id="convertBtn">开始转换</button>
+            <div id="status"></div>
+
+            <div id="logContainer" class="hidden">
+                <h2>处理日志:</h2>
+                <ul id="logList"></ul>
+            </div>
+
+            <div id="outputContainer" class="hidden">
+                <h2>合并后的内容:</h2>
+                <div class="button-group">
+                    <button id="saveBtn" class="action-btn">保存为.txt文件</button>
+                    <button id="copyBtn" class="action-btn">复制全部内容</button>
+                </div>
+                <pre id="output"></pre>
+            </div>
+        </main>
+        <footer>
+            <p>基于 Jina Reader API | 由 Gemini 构建</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
